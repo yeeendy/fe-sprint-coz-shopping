@@ -6,6 +6,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import MainPage from './pages/mainPage'
+import ProductsPage from './pages/ProductsPage'
+import BookmarkPage from './pages/BookmarkPage'
 
 //api데이터 컴포넌트 가져오기
 //props로 내려받기
@@ -36,9 +38,15 @@ function App() {
 
   return (
     <>
-      <Header />
-      <MainPage isData={isData} />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<MainPage isData={isData} />} />
+          <Route path='/products/list' element={<ProductsPage />} />
+          <Route path='/bookmark' element={<BookmarkPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

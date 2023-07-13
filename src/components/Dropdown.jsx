@@ -1,6 +1,7 @@
 import React from 'react';
 import productIcon from '../assets/productIcon.svg'
 import bookmark from '../assets/bookmark.svg'
+import { Link } from 'react-router-dom';
 
 export default function Dropdown() {
 
@@ -16,11 +17,15 @@ export default function Dropdown() {
                 </div>
                 <div className='px-4 w-200 h-50 flex items-center cursor-pointer border-b-2'>
                     <img src={productIcon} className='px-2' />
-                    <span className='font-inter'>상품리스트 페이지</span>
+                    <Link to='/products/list'>
+                        <span className='font-inter'>상품리스트 페이지</span>
+                    </Link>
                 </div>
                 <div className='px-4 w-200 h-50 flex items-center cursor-pointer'>
                     <img src={bookmark} className='px-2' />
-                    <span className='font-inter'>북마크 페이지</span>
+                    <Link to='/bookmark'>
+                        <span className='font-inter'>북마크 페이지</span>
+                    </Link>
                 </div>
             </div>
         </>
