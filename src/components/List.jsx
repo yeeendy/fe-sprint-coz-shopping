@@ -22,7 +22,7 @@ export default function List({ obj }) {
                 <span>
                     {obj && (obj.title || obj.brand_name) && (
                         <span className='text-base font-bold'>
-                            {obj.title ? obj.title : obj.brand_name}
+                            {obj.type === 'Category' ? `# ${obj.title}` : obj.title ? obj.title : obj.brand_name}
                         </span>
                     )}
                 </span>

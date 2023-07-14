@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      minWidth: {
+        '1128': '1128px'
+      },
       boxShadow: {
         '3xl': '0 0 5px 1px rgba(0, 0, 0, 0.1)'
       },
@@ -40,7 +43,8 @@ export default {
         'footer-color': '#888888',
         'dc-color': '#452CDD',
         'unfill': '#DFDFDF',
-        'fill': '#FFD361'
+        'fill': '#FFD361',
+        'accent': '#412DD4'
       }
     },
   },
