@@ -8,7 +8,7 @@ import ctg_brand from '../assets/ctg_brand.svg'
 
 
 
-export default function ProductsPage({ isData }) {
+export default function ProductsPage({ isData, bookmarkList, setBookmarkList }) {
     if (!isData) {
         // isData가 널인 경우 널 렌더링 또는 로딩 표시기 표시
         return null;
@@ -61,7 +61,7 @@ export default function ProductsPage({ isData }) {
                 {/* 삼항연산자로 오류 막기 src={isData ? isData[0].img_url : ''}*/}
                 <ul className='px-16 flex flex-wrap min-w-[1280px]'>
                     {/* map 돌려서 사진 띄우기 */}
-                    {filteredData(filter).map((obj, idx) => <List key={idx} obj={obj} />)}
+                    {filteredData(filter).map((obj, idx) => <List key={idx} obj={obj} bookmarkList={bookmarkList} setBookmarkList={setBookmarkList} />)}
                 </ul>
             </article>
         </main>
