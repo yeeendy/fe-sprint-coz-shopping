@@ -42,7 +42,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<MainPage isData={isData} />} />
-          <Route path='/products/list' element={<ProductsPage />} />
+          <Route path='/products/list' element={<ProductsPage isData={isData} />} />
           <Route path='/bookmark' element={<BookmarkPage />} />
         </Routes>
         <Footer />
